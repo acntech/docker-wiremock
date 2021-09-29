@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+  acntech.wiremock:
+    build:
+      context: .
+    image: acntechie/wiremock:latest
+    container_name: acntech.wiremock
+    ports:
+      - 8080:8080
