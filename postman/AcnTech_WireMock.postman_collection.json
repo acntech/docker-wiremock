@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "ee387f97-0f50-445e-9fcc-acbfc466636a",
+		"name": "AcnTech WireMock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin API",
+			"item": [
+				{
+					"name": "/__admin/mappings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/__admin/mappings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"__admin",
+								"mappings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/__admin/mappings/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/__admin/mappings/31f2c420-8c87-4139-a53a-b4bfc675cb3d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"__admin",
+								"mappings",
+								"31f2c420-8c87-4139-a53a-b4bfc675cb3d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/__admin/mappings - SOAP - 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"/soap/stub\",\n        \"bodyPatterns\": [\n            {\n                \"matchesXPath\": \"//soap:Envelope/soap:Body/v1:getData/login[text() = 'user']\",\n                \"xPathNamespaces\": {\n                    \"soap\": \"http://www.w3.org/2003/05/soap-envelope\",\n                    \"v1\": \"https://urchin.com/api/urchin/v1/\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"body\": \"<soapenv:Envelope xmlns:soapenv=\\\"http://www.w3.org/2003/05/soap-envelope\\\">\\r\\n       <soapenv:Header/>\\r\\n       <soapenv:Body>\\r\\n          <tns:getDataResponse xmlns:tns=\\\"https://urchin.com/api/urchin/v1/\\\">\\r\\n             <record>\\r\\n                <recordId>1</recordId>\\r\\n                <dimensions>\\r\\n                   <dimension name=\\\"u:month\\\">2008-02-00T00:00:00Z</dimension>\\r\\n                </dimensions>\\r\\n                <metrics>\\r\\n                   <u:hits xmlns:u=\\\"https://urchin.com/api/urchin/v1/\\\">836</u:hits>\\r\\n                   <u:bytes xmlns:u=\\\"https://urchin.com/api/urchin/v1/\\\">1953960</u:bytes>\\r\\n                </metrics>\\r\\n             </record>\\r\\n          </tns:getDataResponse>\\r\\n       </soapenv:Body>\\r\\n    </soapenv:Envelope>\",\n        \"headers\": {\n            \"Content-Type\": \"text/xml\"\n        },\n        \"status\": 200\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/__admin/mappings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"__admin",
+								"mappings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/__admin/mappings/{id} - SOAP",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"/soap/stub\",\n        \"bodyPatterns\": [\n            {\n                \"matchesXPath\": \"//soap:Envelope/soap:Body/v1:getData/login[text() = 'user']\",\n                \"xPathNamespaces\": {\n                    \"soap\": \"http://www.w3.org/2003/05/soap-envelope\",\n                    \"v1\": \"https://urchin.com/api/urchin/v1/\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"body\": \"<soapenv:Envelope xmlns:soapenv=\\\"http://www.w3.org/2003/05/soap-envelope\\\">\\r\\n       <soapenv:Header/>\\r\\n       <soapenv:Body>\\r\\n          <tns:getDataResponse xmlns:tns=\\\"https://urchin.com/api/urchin/v1/\\\">\\r\\n             <record>\\r\\n                <recordId>1</recordId>\\r\\n                <dimensions>\\r\\n                   <dimension name=\\\"u:month\\\">2008-02-00T00:00:00Z</dimension>\\r\\n                </dimensions>\\r\\n                <metrics>\\r\\n                   <u:hits xmlns:u=\\\"https://urchin.com/api/urchin/v1/\\\">836</u:hits>\\r\\n                   <u:bytes xmlns:u=\\\"https://urchin.com/api/urchin/v1/\\\">1953960</u:bytes>\\r\\n                </metrics>\\r\\n             </record>\\r\\n          </tns:getDataResponse>\\r\\n       </soapenv:Body>\\r\\n    </soapenv:Envelope>\",\n        \"headers\": {\n            \"Content-Type\": \"text/xml\"\n        },\n        \"status\": 200\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/__admin/mappings/40d4cb34-f7d9-4bc3-bb69-f3ed6adaf37e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"__admin",
+								"mappings",
+								"40d4cb34-f7d9-4bc3-bb69-f3ed6adaf37e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/__admin/mappings - JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"request\": {\n    \"method\": \"GET\",\n    \"url\": \"/api/dummy/1\"\n  },\n  \"response\": {\n    \"body\": \"{ \\\"field\\\": \\\"value\\\" }\",\n    \"headers\": {\n      \"Content-Type\": \"application/json\"\n    },\n    \"status\": 200\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/__admin/mappings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"__admin",
+								"mappings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/soap/stub - SOAP - 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:v1=\"https://urchin.com/api/urchin/v1/\">\n    <soap:Header>\n          </soap:Header>\n    <soap:Body>\n        <v1:getData>\n            <login>user</login>\n            <password>password</password>\n            <ids>7</ids>\n            <start-index>1</start-index>\n            <max-results>2</max-results>\n            <start-date>2008-01-01</start-date>\n            <end-date>2009-01-01</end-date>\n            <dimensions>u:month</dimensions>\n            <metrics>u:hits,u:bytes</metrics>\n            <sort>u:month</sort>\n        </v1:getData>\n    </soap:Body>\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soap/stub",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soap",
+						"stub"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
